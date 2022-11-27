@@ -12,6 +12,10 @@ PrefabInstance:
       value: "\u0448\u0430\u0440 Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 3284581118449683537, guid: ca74802c165498c4480381b0521ee4ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284581118449683537, guid: ca74802c165498c4480381b0521ee4ac, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

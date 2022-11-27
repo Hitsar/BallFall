@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{24CE629C-09BB-13DE-7686-68138A53A441}</ProjectGuid>
+    <ProjectGuid>{7ED81053-48D2-D2B7-349B-06DBF95EF9F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,8 +60,8 @@
     <Compile Include="Assets\_Script\Spawner.cs" />
     <Compile Include="Assets\_Script\Ball.cs" />
     <Compile Include="Assets\_Script\ObjectPool.cs" />
-    <Compile Include="Assets\_Script\Platform.cs" />
     <Compile Include="Assets\_Script\Progress.cs" />
+    <Compile Include="Assets\_Script\Platform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

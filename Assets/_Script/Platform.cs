@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Platform : MonoBehaviour
 {
+    [Header("Logic")]
+    private int _point;
     [SerializeField] float _speed;
     [SerializeField] int _hp;
     [SerializeField] Rigidbody _rb;
-    private int point;
 
+    [Header("Effect")]
     [SerializeField] GameObject _particle;
     [SerializeField] AudioSource _audio;
 
+    [Header("UI")]
+    [SerializeField] Button _buttonLeft;
+    [SerializeField] Button _buttonRight;
     [SerializeField] TextMeshProUGUI _textPoint;
     [SerializeField] TextMeshProUGUI _textHealth;
     [SerializeField] GameObject _diedPanel;
@@ -20,27 +26,43 @@ public class Platform : MonoBehaviour
     private void Start()
     {
         _diedPanel.SetActive(false);
+        if (Progress.Instance.PlayerInfo._phone)
+            _buttonLeft.gameObject.SetActive(true);
+            _buttonRight.gameObject.SetActive(true);
     }
+
     private void Update()
     {
         _rb.velocity = Vector3.left * _speed * Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.A))
         {
-            _speed = 500;
+            Left();
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            _speed = -500;
+            Right();
         }
 
         if (Input.GetKeyUp(KeyCode.A))
         {
-            _speed = 0;
+            Up();
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
-            _speed = 0;
+            Up();
         }
+    }
+    public void Left()
+    {
+        _speed = 500;
+    }
+    public void Right()
+    {
+        _speed = -500;
+    }
+    public void Up()
+    {
+        _speed = 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,9 +70,8 @@ public class Platform : MonoBehaviour
         if (other.TryGetComponent(out Ball ball))
         {
             ball.gameObject.SetActive(false);
-            Progress.Instance._coin++;
-            point++;
-            _textPoint.text = point.ToString();
+            _point++;
+            _textPoint.text = _point.ToString();
             Instantiate(_particle, transform.position, Quaternion.identity);
             _audio.Play();
         }
@@ -62,11 +83,12 @@ public class Platform : MonoBehaviour
         _textHealth.text = _hp.ToString();
         if (_hp <= 0)
         {
-            if (Progress.Instance._point < point)
+            if (Progress.Instance.PlayerInfo._point < _point)
             {
-                Progress.Instance._point = point;
+                Progress.Instance.PlayerInfo._point = _point;
+                Progress.Instance.Save();
             }
-            Debug.Log("ÏÐÀÈÃÐÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀË!!!!!!!!!!!!");
+            Time.timeScale = 0;
             _diedPanel.SetActive(true);
         }
 
