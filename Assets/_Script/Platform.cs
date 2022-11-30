@@ -10,7 +10,8 @@ public class Platform : MonoBehaviour
     private int _point;
     [SerializeField] float _speed;
     [SerializeField] int _hp;
-    [SerializeField] Rigidbody _rb;
+    private Rigidbody _rigidBody;
+    private Vector3 _moveInput;
 
     [Header("Effect")]
     [SerializeField] GameObject _particle;
@@ -25,6 +26,7 @@ public class Platform : MonoBehaviour
 
     private void Start()
     {
+        _rigidBody = GetComponent<Rigidbody>();
         _diedPanel.SetActive(false);
         if (Progress.Instance.PlayerInfo._phone)
             _buttonLeft.gameObject.SetActive(true);
@@ -33,37 +35,17 @@ public class Platform : MonoBehaviour
 
     private void Update()
     {
-        _rb.velocity = Vector3.left * _speed * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Left();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Right();
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            Up();
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            Up();
-        }
+        _moveInput.x = Input.GetAxisRaw("Horizontal");
+        _rigidBody.MovePosition(_rigidBody.position + _moveInput * _speed * Time.deltaTime);
     }
-    public void Left()
-    {
-        _speed = 500;
-    }
-    public void Right()
-    {
-        _speed = -500;
-    }
-    public void Up()
-    {
-        _speed = 0;
-    }
+    //public void Left()
+    //{
+    //    _speed = 500;
+    //}
+    //public void Right()
+    //{
+    //    _speed = -500;
+    //}
 
     private void OnTriggerEnter(Collider other)
     {

@@ -2161,6 +2161,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1521842762}
     - target: {fileID: 943167263, guid: d1448c25595317644a726ef3337b433c, type: 3}
+      propertyPath: _speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 943167263, guid: d1448c25595317644a726ef3337b433c, type: 3}
       propertyPath: _diedPanel
       value: 
       objectReference: {fileID: 847588092}
