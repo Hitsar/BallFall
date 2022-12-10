@@ -8,8 +8,10 @@ public class Platform : MonoBehaviour
 {
     [Header("Logic")]
     private int _point;
+    
     [SerializeField] float _speed;
     [SerializeField] int _hp;
+    
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
 
@@ -20,14 +22,18 @@ public class Platform : MonoBehaviour
     [Header("UI")]
     [SerializeField] Button _buttonLeft;
     [SerializeField] Button _buttonRight;
+    
     [SerializeField] TextMeshProUGUI _textPoint;
     [SerializeField] TextMeshProUGUI _textHealth;
+    
     [SerializeField] GameObject _diedPanel;
 
     private void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
+        
         _diedPanel.SetActive(false);
+        
         if (Progress.Instance.PlayerInfo._phone)
             _buttonLeft.gameObject.SetActive(true);
             _buttonRight.gameObject.SetActive(true);
@@ -38,11 +44,11 @@ public class Platform : MonoBehaviour
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _rigidBody.MovePosition(_rigidBody.position + _moveInput * _speed * Time.deltaTime);
     }
-    //public void Left()
+    //public void ButtonLeft()
     //{
     //    _speed = 500;
     //}
-    //public void Right()
+    //public void ButtonRight()
     //{
     //    _speed = -500;
     //}
@@ -54,7 +60,9 @@ public class Platform : MonoBehaviour
             ball.gameObject.SetActive(false);
             _point++;
             _textPoint.text = _point.ToString();
+            
             Instantiate(_particle, transform.position, Quaternion.identity);
+            
             _audio.Play();
         }
     }
@@ -63,6 +71,7 @@ public class Platform : MonoBehaviour
     {
         _hp--;
         _textHealth.text = _hp.ToString();
+        
         if (_hp <= 0)
         {
             if (Progress.Instance.PlayerInfo._point < _point)
@@ -71,6 +80,7 @@ public class Platform : MonoBehaviour
                 Progress.Instance.Save();
             }
             Time.timeScale = 0;
+            
             _diedPanel.SetActive(true);
         }
 
