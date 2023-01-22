@@ -1,18 +1,14 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerInfo
 {
     public int _point;
-    public int _coin;
-    public bool _phone;
 }
 
 public class Progress : MonoBehaviour
 {
-    [SerializeField] Toggle _toggle;
 
     public PlayerInfo PlayerInfo;
     [DllImport("__Internal")]
@@ -55,17 +51,5 @@ public class Progress : MonoBehaviour
     public void SetPlayerInfo(string value)
     {
         PlayerInfo = JsonUtility.FromJson<PlayerInfo>(value);
-    }
-
-    public void Phone()
-    {
-        if (_toggle.isOn)
-        {
-            PlayerInfo._phone = true;
-        }
-        else
-        {
-            PlayerInfo._phone = false;
-        }
     }
 }

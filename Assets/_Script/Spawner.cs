@@ -7,8 +7,6 @@ public class Spawner : ObjectPool
     [SerializeField] float _secondForSpawn;
     private float _time = 0;
 
-    [SerializeField] Platform _platform;
-
     private void Start()
     {
         Initialized(_prefabObjects);
@@ -35,14 +33,5 @@ public class Spawner : ObjectPool
     {
         enemy.SetActive(true);
         enemy.transform.position = spawnPoint;
-    }
-    //
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out Ball ball))
-        {
-            ball.gameObject.SetActive(false);
-            _platform.Die();
-        }
     }
 }
