@@ -62,10 +62,10 @@
     <Compile Include="Assets\_Script\Platform\MovePlatform.cs" />
     <Compile Include="Assets\_Script\ObjectPool.cs" />
     <Compile Include="Assets\_Script\Menu.cs" />
+    <Compile Include="Assets\_Script\UI\DiedMenu.cs" />
     <Compile Include="Assets\_Script\Spawner.cs" />
     <Compile Include="Assets\_Script\DiedZone.cs" />
     <Compile Include="Assets\_Script\Ball.cs" />
-    <Compile Include="Assets\_Script\DiedMenu.cs" />
     <Compile Include="Assets\_Script\Platform\BallTouchPlatform.cs" />
     <Compile Include="Assets\_Script\Platform\HealthPlatform.cs" />
     <Compile Include="Assets\_Script\Progress.cs" />
@@ -748,11 +748,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>

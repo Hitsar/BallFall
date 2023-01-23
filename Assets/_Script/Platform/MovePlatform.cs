@@ -17,4 +17,19 @@ public class MovePlatform : MonoBehaviour
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _rigidbody.MovePosition(_rigidbody.position + _moveInput * _speed * Time.deltaTime);
     }
+
+    public void ButtonLeft()
+    {
+        _moveInput.x = -1;
+    }
+
+    public void ButtonRight()
+    {
+        _moveInput.x = 1;
+    }
+
+    public void ButtonUp()
+    {
+        _moveInput.x = 0;
+    }
 }
