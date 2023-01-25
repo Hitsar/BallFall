@@ -12,7 +12,9 @@ public class BallTouchPlatform : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out Ball ball))
+        {
             ball.gameObject.SetActive(false);
             _addPoint.BallAddPoint();
+        }
     }
 }

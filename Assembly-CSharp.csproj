@@ -64,6 +64,7 @@
     <Compile Include="Assets\_Script\Menu.cs" />
     <Compile Include="Assets\_Script\UI\DiedMenu.cs" />
     <Compile Include="Assets\_Script\Spawner.cs" />
+    <Compile Include="Assets\_Script\UI\TextDisplay.cs" />
     <Compile Include="Assets\_Script\DiedZone.cs" />
     <Compile Include="Assets\_Script\Ball.cs" />
     <Compile Include="Assets\_Script\Platform\BallTouchPlatform.cs" />

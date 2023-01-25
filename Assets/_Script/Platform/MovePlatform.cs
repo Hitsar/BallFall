@@ -20,12 +20,12 @@ public class MovePlatform : MonoBehaviour
 
     public void ButtonLeft()
     {
-        _moveInput.x = -1;
+        _moveInput.x = -1f;
     }
 
     public void ButtonRight()
     {
-        _moveInput.x = 1;
+        _moveInput.x = 1f;
     }
 
     public void ButtonUp()
