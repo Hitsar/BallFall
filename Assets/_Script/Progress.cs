@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerInfo
 {
-    public int _point;
+    public int Point;
 }
 
 public class Progress : MonoBehaviour
@@ -30,15 +30,6 @@ public class Progress : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            PlayerInfo = new PlayerInfo();
-            Save();
         }
     }
 

@@ -11168,10 +11168,10 @@ RectTransform:
   m_Father: {fileID: 737534782}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -120.92999, y: 0}
-  m_SizeDelta: {x: 558.1284, y: 677.77}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 276.0486, y: 0}
+  m_SizeDelta: {x: 552.0858, y: 677.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169308404
 MonoBehaviour:
@@ -11185,11 +11185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
+  m_Delegates: []
 --- !u!114 &1169308405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11233,19 +11229,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1169308406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1596790982}
-        m_TargetAssemblyTypeName: MovePlatform, Assembly-CSharp
-        m_MethodName: ButtonRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1169308406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13204,7 +13188,7 @@ RectTransform:
   m_GameObject: {fileID: 1427458520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3978, y: 1.3978, z: 1.3978}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 737534782}
@@ -15055,17 +15039,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587262145}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1596790982 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 707736852, guid: d1448c25595317644a726ef3337b433c, type: 3}
-  m_PrefabInstance: {fileID: 6833668744738625560}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1bf78f7ae731e4eb8a6fc848d73827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1604924282
 GameObject:
   m_ObjectHideFlags: 0
@@ -15201,7 +15174,7 @@ RectTransform:
   m_GameObject: {fileID: 1606856051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1936622, y: 1.1936622, z: 1.1936622}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 426973132}
@@ -15209,7 +15182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: -145}
+  m_AnchoredPosition: {x: -0.000011444, y: -115.2}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606856053
@@ -15441,7 +15414,7 @@ RectTransform:
   m_GameObject: {fileID: 1654729947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0918064, y: 1.0918064, z: 1.0918064}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 426973132}
@@ -15449,7 +15422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019073, y: 8}
+  m_AnchoredPosition: {x: 0.000019073, y: 44.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654729949
@@ -16116,10 +16089,10 @@ RectTransform:
   m_Father: {fileID: 737534782}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 120.94, y: 0}
-  m_SizeDelta: {x: 558.1285, y: 677.77}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -254.88965, y: 0}
+  m_SizeDelta: {x: 509.7878, y: 677.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713979186
 MonoBehaviour:
@@ -16133,11 +16106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
+  m_Delegates: []
 --- !u!114 &1713979187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16181,19 +16150,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1713979188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1596790982}
-        m_TargetAssemblyTypeName: MovePlatform, Assembly-CSharp
-        m_MethodName: ButtonLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1713979188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16207,7 +16164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17328,7 +17285,7 @@ RectTransform:
   m_GameObject: {fileID: 1868391198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.442, y: 1.442, z: 1.442}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 737534782}
@@ -18146,7 +18103,7 @@ MonoBehaviour:
   - {fileID: 525252512}
   - {fileID: 958837365}
   - {fileID: 346503058}
-  _secondForSpawn: 0.7
+  _secondForSpawn: 0.8
 --- !u!1 &2006982774
 GameObject:
   m_ObjectHideFlags: 0
