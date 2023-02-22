@@ -7,16 +7,19 @@ public class AddPoint : MonoBehaviour
     private static extern void SetToLeaderboard(int value);
     private TextDisplay _textDisplay;
     private int _point;
+    private Animations _animations;
 
     private void Start()
     {
         _textDisplay = FindObjectOfType<TextDisplay>().GetComponent<TextDisplay>();
+        _animations = FindObjectOfType<Animations>().GetComponent<Animations>();
     }
 
     public void BallAddPoint()
     {
         _point++;
         _textDisplay.PointDisplay(_point);
+        _animations.PointAnimation();
     }
 
     public void SetRecord()
@@ -24,7 +27,7 @@ public class AddPoint : MonoBehaviour
         if (_point > Progress.Instance.PlayerInfo.Point)
         {
             Progress.Instance.PlayerInfo.Point = _point;
-            SetToLeaderboard(_point);
+          //  SetToLeaderboard(_point);
         }
     }
 }
