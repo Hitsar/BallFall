@@ -17,6 +17,7 @@ public class DiedZone : MonoBehaviour
         {
             ball.gameObject.SetActive(false);
             _healthPlatform.TakeDamage(_audioHit);
+            _audioHit.Play();
         }
     }
 }

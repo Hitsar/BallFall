@@ -31,7 +31,7 @@ public class HealthPlatform : MonoBehaviour
             _diedMenu.Enabling();
             audio.Play();
             _addPoint.SetRecord();
-           // ShowAdv();
+            ShowAdv();
         }
     }
 }

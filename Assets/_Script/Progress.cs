@@ -9,8 +9,8 @@ public class PlayerInfo
 
 public class Progress : MonoBehaviour
 {
-
     public PlayerInfo PlayerInfo;
+
     [DllImport("__Internal")]
     private static extern void SaveExtern(string date);
     [DllImport("__Internal")]

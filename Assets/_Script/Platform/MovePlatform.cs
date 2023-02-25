@@ -16,15 +16,5 @@ public class MovePlatform : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _rigidbody.MovePosition(_rigidbody.position + _moveInput * _speed * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            sd();
-        }
-    }
-
-    private void sd()
-    {
-        _moveInput.x = 1f;
     }
 }
