@@ -9,9 +9,9 @@ public class BallTouchPlatform : MonoBehaviour
         _addPoint = GetComponent<AddPoint>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.TryGetComponent(out Ball ball))
+        if (collision.gameObject.TryGetComponent(out Ball ball))
         {
             ball.gameObject.SetActive(false);
             _addPoint.BallAddPoint();
