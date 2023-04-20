@@ -3,17 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class DiedMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject _panel;
     private Animations _animations;
 
-    private void Start()
+    private void OnEnable()
     {
-        _animations = FindObjectOfType<Animations>().GetComponent<Animations>();
-    }
-
-    public void Enabling()
-    {
-        _panel.SetActive(true);
+        _animations = FindObjectOfType<Animations>();
         _animations.DiedMenuAnimation();
     }
 

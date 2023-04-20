@@ -13,8 +13,8 @@ public class AddPoint : MonoBehaviour
 
     private void Start()
     {
-        _textDisplay = FindObjectOfType<TextDisplay>().GetComponent<TextDisplay>();
-        _animations = FindObjectOfType<Animations>().GetComponent<Animations>();
+        _textDisplay = FindObjectOfType<TextDisplay>();
+        _animations = FindObjectOfType<Animations>();
     }
 
     public void BallAddPoint()
@@ -31,6 +31,7 @@ public class AddPoint : MonoBehaviour
         {
             Progress.Instance.PlayerInfo.Point = _point;
             SetToLeaderboard(_point);
+            Progress.Instance.Save();
         }
     }
 }

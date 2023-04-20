@@ -4,10 +4,7 @@ public class BallTouchPlatform : MonoBehaviour
 {
     private AddPoint _addPoint;
 
-    private void Start()
-    {
-        _addPoint = GetComponent<AddPoint>();
-    }
+    private void Start() =>   _addPoint = GetComponent<AddPoint>();
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -7,14 +7,9 @@ public class MovePlatform : MonoBehaviour
     private Rigidbody _rigidbody;
     private Vector3 _moveInput;
 
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
+    private void Start() => _rigidbody = GetComponent<Rigidbody>();
 
-    private void Update()
-    {
-        _moveInput.x = Input.GetAxisRaw("Horizontal");
-        _rigidbody.MovePosition(_rigidbody.position + _moveInput * _speed * Time.deltaTime);
-    }
+    private void Update() => _moveInput.x = Input.GetAxisRaw("Horizontal");
+
+    private void FixedUpdate() =>  _rigidbody.MovePosition(_rigidbody.position + _moveInput * _speed * Time.fixedDeltaTime);
 }

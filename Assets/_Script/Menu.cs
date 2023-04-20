@@ -18,8 +18,5 @@ public class Menu : MonoBehaviour
         _textRecord.text = Progress.Instance.PlayerInfo.Point.ToString();
     }
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+    public void StartGame() => SceneManager.LoadScene(1);
 }

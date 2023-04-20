@@ -6,10 +6,7 @@ public class DiedZone : MonoBehaviour
 
     private HealthPlatform _healthPlatform;
 
-    private void Start()
-    {
-        _healthPlatform = FindObjectOfType<HealthPlatform>().GetComponent<HealthPlatform>();
-    }
+    private void Start() => _healthPlatform = FindObjectOfType<HealthPlatform>();
 
     private void OnTriggerEnter(Collider other)
     {

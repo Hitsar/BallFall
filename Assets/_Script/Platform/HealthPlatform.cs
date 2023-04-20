@@ -15,10 +15,10 @@ public class HealthPlatform : MonoBehaviour
 
     private void Start()
     {
-        _diedMenu = FindObjectOfType<DiedMenu>().GetComponent<DiedMenu>();
+        _diedMenu = FindObjectOfType<DiedMenu>();
         _addPoint = GetComponent<AddPoint>();
-        _textDisplay = FindObjectOfType<TextDisplay>().GetComponent<TextDisplay>();
-        _animations = FindObjectOfType<Animations>().GetComponent<Animations>();
+        _textDisplay = FindObjectOfType<TextDisplay>();
+        _animations = FindObjectOfType<Animations>();
     }
     public void TakeDamage(AudioSource audio)
     {
@@ -28,7 +28,7 @@ public class HealthPlatform : MonoBehaviour
 
         if (_health <= 0)
         {
-            _diedMenu.Enabling();
+            _diedMenu.gameObject.SetActive(true);
             audio.Play();
             _addPoint.SetRecord();
             ShowAdv();
